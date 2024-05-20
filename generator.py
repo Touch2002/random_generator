@@ -20,5 +20,5 @@ def gen_result(xi_list):
     return yi_list
 
 if __name__ == '__main__':
-    q = gen_xi(0, 289, 1084, 2^17)
+    q = gen_xi(0, 289, 1084, 2**17)
     print(q, len(q))

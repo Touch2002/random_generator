@@ -2,26 +2,6 @@ from sympy import primefactors
 import math
 
 
-def inspect(a, c, m):
-    k = 0
-    while k != 1:
-        k = find_gcd(c, m)
-        if k != 1:
-            c += 1
-
-    n = False
-    while not n:
-        n = all_prime_factors(a-1, 2 ^ 17)
-        a += 1
-        print(n, a)
-
-
-
-    result = [a, c]
-    return result
-
-
-
 def all_prime_factors(n, m):
     """Перевірка, чи число n ділиться на всі прості дільники числа m"""
     prime_factors = primefactors(m)
@@ -30,17 +10,34 @@ def all_prime_factors(n, m):
             return False
     return True
 
+def check_divisibility_by_4(a, m):
+    while True:
+        divisible_a = (a % 4 == 0)
+        divisible_b = (m % 4 == 0)
+        if (divisible_a and divisible_b) or (not divisible_a and not divisible_b):
+            return [a, m]
+        else:
+            a += 1
 
-k = 289
-n = False
-while not n:
-    n = all_prime_factors(k-1, 2^17)
-    k += 1
-    print(n, k)
+
+def x4x4(a, m):
+    return
+
+def inspect(a, c, m):
+    k = 0
+    while k != 1:
+        k = math.gcd(c, m)
+        if k != 1:
+            c += 1
+    n = False
+    while not n:
+        n = all_prime_factors(a-1, 2 ** 17)
+        a += 1
+        print(n, a)
 
 
-def find_gcd(a, b):
-    return math.gcd(a, b)
+    result = [a, c, m]
+    return result
 
 
 def test():
@@ -50,12 +47,23 @@ def test():
     n2 = 10
     print(all_prime_factors(n1, m))  # True, оскільки 60 ділиться на 2, 3 і 5
     print(all_prime_factors(n2, m))  # False, оскільки 10 не ділиться на 3
-    print(all_prime_factors(1079, 2 ^ 17))
+    print(all_prime_factors(1079, 2 ** 17))
 
     # Приклад використання
     a = 289
-    b = 2 ^ 17
-    print(f"НСД({a}, {b}) = {find_gcd(a, b)}")
+    b = 2 ** 17
+    print(f"НСД({a}, {b}) = {math.gcd(a, b)}")
 
-    print(inspect(289, 1079, 2 ^ 17))
+    print(inspect(289, 1079, 2 ** 17))
+
+    # Приклади використання
+    num1 = 16
+    num2 = 20
+    num3 = 15
+    num4 = 9
+
+    print(f"{num1} і {num2}: {check_divisibility_by_4(num1, num2)}")  # True, обидва діляться на 4
+    print(f"{num1} і {num3}: {check_divisibility_by_4(num1, num3)}")  # False, тільки одне число ділиться на 4
+    print(f"{num3} і {num4}: {check_divisibility_by_4(num3, num4)}")  # True, жодне не ділиться на 4
+    print(f"{num2} і {num4}: {check_divisibility_by_4(num2, num4)}")  # False, тільки одне число ділиться на 4
 test()
