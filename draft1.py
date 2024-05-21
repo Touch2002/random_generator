@@ -1,7 +1,7 @@
 import os
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit, QMessageBox
-
+from insp import inspect
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:/Users/userr/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyQt5/Qt5/plugins/platforms"
 
 class AdderApp(QWidget):
@@ -63,11 +63,13 @@ class AdderApp(QWidget):
 
     def add_numbers(self):
         try:
-            num1 = float(self.entry1.text())
-            num2 = float(self.entry2.text())
-            result = num1 + num2
-            self.resultLabel.setText(f'Результат: {result}')
-            self.messageArea.append(f'Додано числа {num1} і {num2}. Результат: {result}')
+            a = float(self.a)
+            c = float(self.c)
+            m = float(self.m)
+            x0 = float(self.x0)
+            res = inspect(a, c, m)
+            self.resultLabel.setText(f'Результат: {res}')
+            #self.messageArea.append(f'Додано числа {num1} і {num2}. Результат: {result}')
         except ValueError:
             QMessageBox.critical(self, 'Помилка', 'Будь ласка, введіть коректні числа.')
             self.messageArea.append('Помилка: Некоректні вхідні дані.')
