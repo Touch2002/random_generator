@@ -90,7 +90,7 @@ class AdderApp(QWidget):
     def calculate_from_lab(self):
         """Проводить генерацію для чисел з лабораторної"""
         x0 = 0
-        a, c, m = [289, 169], [1079, 857], [131072, 1048576]
+        a, c, m = [297, 1013], [203, 857], [131072, 1048576]
         file_name = ["GPCH1", "GPCH2"]
         for i in range(2):
             self.messageArea.append(f'ПОЧИНАЮ ГЕНЕРАЦІЮ ДЛЯ ПОСЛІДОВНОСТІ {file_name[i]}')

@@ -26,9 +26,3 @@ def generate(x0, acmlist, file_name):
     xi_l = gen_xi(x0, a, c, m)
     yi_l = gen_result(xi_l)
     save_result(yi_l, file_name)
-
-
-if __name__ == '__main__':
-    q = gen_xi(0, 289, 1084, 2**17)
-    print(q, len(q))
-    print(gen_result(q))

@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3eac3ea7-3403-45f0-9958-19bd3b7eac23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draft1.py" beforeDir="false" afterPath="$PROJECT_DIR$/draft1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draft2.py" beforeDir="false" afterPath="$PROJECT_DIR$/insp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insp.py" beforeDir="false" afterPath="$PROJECT_DIR$/insp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716320274539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add save_result, generate, calculate_from_lab, generate_user, rename draft2 to insp, copy interface from draft1 to main">
+      <option name="closed" value="true" />
+      <created>1716330117291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716330117291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +190,8 @@
     <MESSAGE value="add all_prime_factors, check_divisibility_by_4" />
     <MESSAGE value="add all_prime_factors, check_divisibility_by_4" />
     <MESSAGE value="add inspect to draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="add inspect to draft" />
+    <MESSAGE value="add save_result, generate, calculate_from_lab, generate_user, rename draft2 to insp, copy interface from draft1 to main" />
+    <option name="LAST_COMMIT_MESSAGE" value="add save_result, generate, calculate_from_lab, generate_user, rename draft2 to insp, copy interface from draft1 to main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
