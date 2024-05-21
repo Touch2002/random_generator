@@ -2,26 +2,24 @@ from sympy import primefactors
 import math
 
 
-def all_prime_factors(n, m):
-    """Перевірка, чи число n ділиться на всі прості дільники числа m"""
+def all_prime_factors(a, m):
+    """Перевірка, чи число a ділиться на всі прості дільники числа m"""
     prime_factors = primefactors(m)
     for factor in prime_factors:
-        if n % factor != 0:
+        if a % factor != 0:
             return False
     return True
+
 
 def check_divisibility_by_4(a, m):
     while True:
         divisible_a = (a % 4 == 0)
         divisible_b = (m % 4 == 0)
         if (divisible_a and divisible_b) or (not divisible_a and not divisible_b):
-            return [a, m]
+            return True, a
         else:
             a += 1
 
-
-def x4x4(a, m):
-    return
 
 def inspect(a, c, m):
     k = 0
@@ -30,13 +28,18 @@ def inspect(a, c, m):
         if k != 1:
             c += 1
     n = False
+    l = False
     while not n:
-        n = all_prime_factors(a-1, 2 ** 17)
-        a += 1
-        print(n, a)
+        p = check_divisibility_by_4(a-1, m)
+        l = p[0]
+        n = all_prime_factors(p[1], 2 ** 17)
+        if not n or not l:
+            a += 1
+        print(n, a, "inspect")
 
 
     result = [a, c, m]
+    print(result, "Inspect")
     return result
 
 
@@ -54,7 +57,7 @@ def test():
     b = 2 ** 17
     print(f"НСД({a}, {b}) = {math.gcd(a, b)}")
 
-    print(inspect(289, 1079, 2 ** 17))
+    print(inspect(169, 857, 2 ** 20))
 
     # Приклади використання
     num1 = 16

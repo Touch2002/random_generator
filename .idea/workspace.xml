@@ -7,7 +7,6 @@
     <list default="true" id="3eac3ea7-3403-45f0-9958-19bd3b7eac23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draft2.py" beforeDir="false" afterPath="$PROJECT_DIR$/draft2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +47,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.draft1.executor": "Run",
-    "Python.draft2.executor": "Run",
+    "Python.draft2.executor": "Debug",
     "Python.generator.executor": "Run",
+    "Python.main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -141,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716158381504</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create user interface + drafting">
+      <option name="closed" value="true" />
+      <created>1716220583922</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716220583922</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,9 +167,10 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="del comments" />
     <MESSAGE value="del comment" />
+    <MESSAGE value="add all_prime_factors, check_divisibility_by_4" />
     <MESSAGE value="create user interface + drafting" />
-    <MESSAGE value="create user interface + drafting" />
-    <option name="LAST_COMMIT_MESSAGE" value="create user interface + drafting" />
+    <MESSAGE value="add all_prime_factors, check_divisibility_by_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="add all_prime_factors, check_divisibility_by_4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -173,8 +182,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/draft2.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="2" />
+          <line>34</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
