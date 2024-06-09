@@ -12,29 +12,33 @@ def all_prime_factors(a, m):
 
 
 def check_divisibility_by_4(a, m):
-    while True:
+    while m % 4 == 0:
         divisible_a = (a % 4 == 0)
         divisible_b = (m % 4 == 0)
-        if (divisible_a and divisible_b) or (not divisible_a and not divisible_b):
-            return True, a
+        if divisible_a and divisible_b:
+            break
         else:
             a += 1
+    return True, a
 
 
 def inspect(a, c, m):
+    a -= 1
+
     k = 0
     while k != 1:
         k = math.gcd(c, m)
         if k != 1:
             c += 1
+
     n = False
     l = False
-    while not n:
-        p = check_divisibility_by_4(a-1, m)
+    while not n or not l:
+        p = check_divisibility_by_4(a, m)
         l = p[0]
-        n = all_prime_factors(p[1], 2 ** 17)
+        a = p[1]
+        n = all_prime_factors(a, m)
         if not n or not l:
             a += 1
-    result = [a, c, m]
+    result = [a+1, c, m]
     return result
-

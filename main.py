@@ -5,6 +5,7 @@ from insp import inspect
 from generator import generate
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:/Users/userr/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyQt5/Qt5/plugins/platforms"
 
+
 class AdderApp(QWidget):
     def __init__(self):
         super().__init__()
