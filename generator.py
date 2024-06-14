@@ -11,7 +11,7 @@ def gen_xi(x0, a, c, m):
 def gen_result(xi_list):
     yi_list = []
     for i in xi_list:
-        yi_list.append(int(i / 4 % 4095))
+        yi_list.append(int(i / 4 % 4096))
     return yi_list
 
 
